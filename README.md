@@ -1,4 +1,4 @@
-Practica 3 de Procesadores de Lenguaje.
+Practica 3 de Procesadores de Lenguaje
 
 Iván García Campos. Practica hecha de forma individual.
 
