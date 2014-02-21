@@ -33,12 +33,7 @@
     
     
 <!-- Cargar el Fichero correspondiente -->
-  <p> Indique el fichero INI correspondiente: </p>
-  
-  <input type="file" id="fileinput" /> 
-   <br>
-   <br>
-   <br>
+
    
    <!--Drag and drop-->
 
