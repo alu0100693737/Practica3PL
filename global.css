@@ -1,0 +1,62 @@
+html * {
+   font-family: "Arial", 80% sans-serif;
+  }
+
+body {
+font: small-caps 120%/200% serif;
+
+font-family: cursive;
+
+color: #A9F5D0;
+
+background: #A9F5D0 url("1.jpg") no-repeat ;
+background-size: cover;
+background-position: center 0;
+background-attachment: fixed;
+margin-left: 20%;
+margin-right: 20%;
+
+}
+
+
+#result { border-color: red; }
+
+li.header { background-color: #99FF66 }
+li.comments { background-color: #FFFF66 }
+li.blanks { background-color: #CC6699}
+li.nameEqualValue { background-color: #33CCFF}
+li.nameEqualComments{background-color: #006666}
+li.error { background-color: #FF3300}
+
+#fileinput
+{
+  border:2px dotted #A9F5D0;
+  width:400px;
+  color:#92AAB0;
+  text-align:left;vertical-align:middle;
+  padding:10px 10px 10 10px;
+  margin-bottom:20px;
+  font-size:150%;
+}
+
+#entrada
+{
+  font: oblique 100% sans-serif bold; 
+}
+
+h1 { text-align: center; font-size: 80px; }
+th, td { vertical-align: top; text-align: left; } 
+
+#initialinput
+{
+    font: small-caps 120%/200% serif;
+    color: #FFFFFF;
+    background-color: #29088A;
+}
+
+#finaloutput
+{
+  font: small-caps 80%/200% serif;
+  color: #000000;
+  
+}
