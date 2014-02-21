@@ -7,7 +7,7 @@
      <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
 
     <script type="text/javascript" src="js/ini.js"></script>
-    <script type="text/javascript" src="js/draganddrop.js"></script>
+    <!--<script type="text/javascript" src="js/draganddrop.js"></script> -->
     <script type="text/html" id="externScript"> 
 	  <li class = "<%= token.type %>"> <span > <%= match %> </span>
       </script>
@@ -33,7 +33,9 @@
     
     
 <!-- Cargar el Fichero correspondiente -->
-  <div id="entrada" style="float:left;"> <p> Indique el fichero INI correspondiente: <input type="file" class="btn btn-default" id="entrada" /> </p></div>
+  <p> Indique el fichero INI correspondiente: </p>
+  
+  <input type="file" id="fileinput" /> 
    <br>
    <br>
    <br>

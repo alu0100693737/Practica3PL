@@ -7,11 +7,20 @@ $(document).ready(function() {
     initialinput.innerHTML = localStorage.initialinput;
     finaloutput.innerHTML = localStorage.finaloutput;
    }
+   $("#entrada").change(browser);
+   
    var dropZone = document.getElementById('fileinput');
    dropZone.addEventListener('dragover', handleDragOver, false);
    dropZone.addEventListener('drop', handleFileSelect, false);
    $("#fileinput").change(calculate);
 });
+
+
+function browser(evt){
+  var f = evt.target.files[0];
+  calculate(f);
+}
+
 
 // main
 function calculate(evt) {
@@ -32,8 +41,8 @@ function calculate(evt) {
       
       if (window.localStorage)
       {
-localStorage.initialinput = contents;
-localStorage.finaloutput = pretty;
+	  localStorage.initialinput = contents;
+	  localStorage.finaloutput = pretty;
       }
     }
     r.readAsText(f);
@@ -48,16 +57,16 @@ function handleFileSelect(evt) {
 
     var files = evt.dataTransfer.files; // FileList object.
 //calculate
-var f = evt.target.files;
-var output=[];
-for(var i=0, f; f=files[i]; i++){
-if (f) {
-var r = new FileReader();
-r.onload = function(e) {
-var contents = e.target.result;
+    var f = evt.target.files;
+    var output=[];
+    for(var i=0, f; f=files[i]; i++){
+	if (f) {
+	    var r = new FileReader();
+	    r.onload = function(e) {
+	    var contents = e.target.result;
       
-var tokens = lexer(contents);
-var pretty = tokensToString(tokens);
+	    var tokens = lexer(contents);
+	    var pretty = tokensToString(tokens);
       
 out.className = 'unhidden';
 initialinput.innerHTML = contents;

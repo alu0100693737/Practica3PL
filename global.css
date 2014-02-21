@@ -21,8 +21,6 @@ margin-right: 20%;
 
 #result { border-color: red; }
 
-pre.output { background-color: #000000; }
-
 li.header { background-color: #99FF66 }
 li.comments { background-color: #FFFF66 }
 li.blanks { background-color: #CC6699}
@@ -32,7 +30,6 @@ li.error { background-color: #FF3300}
 
 #fileinput
 {
-  background: #A9F5D0 url("1.jpg") no-repeat 
   border:2px dotted #A9F5D0;
   width:400px;
   color:#92AAB0;
@@ -44,8 +41,22 @@ li.error { background-color: #FF3300}
 
 #entrada
 {
-  font: oblique 120% sans-serif bold; 
+  font: oblique 100% sans-serif bold; 
 }
 
 h1 { text-align: center; font-size: 80px; }
 th, td { vertical-align: top; text-align: left; } 
+
+#initialinput
+{
+    font: small-caps 120%/200% serif;
+    color: #FFFFFF;
+    background-color: #29088A;
+}
+
+#finaloutput
+{
+  font: small-caps 80%/200% serif;
+  color: #000000;
+  
+}

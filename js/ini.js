@@ -7,11 +7,15 @@ $(document).ready(function() {
     initialinput.innerHTML = localStorage.initialinput;
     finaloutput.innerHTML = localStorage.finaloutput;
    }
+   
+   
    var dropZone = document.getElementById('fileinput');
    dropZone.addEventListener('dragover', handleDragOver, false);
    dropZone.addEventListener('drop', handleFileSelect, false);
    $("#fileinput").change(calculate);
 });
+
+
 
 // main
 function calculate(evt) {
