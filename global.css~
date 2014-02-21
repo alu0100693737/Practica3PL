@@ -3,7 +3,7 @@ html * {
   }
 
 body {
-font: small-caps 100%/200% serif;
+font: small-caps 120%/200% serif;
 
 font-family: cursive;
 
@@ -12,13 +12,27 @@ color: #A9F5D0;
 background: #A9F5D0 url("1.jpg") no-repeat ;
 background-size: cover;
 background-position: center 0;
+background-attachment: fixed;
 margin-left: 20%;
 margin-right: 20%;
 
 }
 
-#deslizamiento
+
+#result { border-color: red; }
+
+pre.output { background-color: #FFFFFF; }
+
+li.header { background-color: #99FF66 }
+li.comments { background-color: #FFFF66 }
+li.blanks { background-color: #CC6699}
+li.nameEqualValue { background-color: #33CCFF}
+li.nameEqualComments{background-color: #006666}
+li.error { background-color: #FF3300}
+
+#fileinput
 {
+  background: #A9F5D0 url("1.jpg") no-repeat 
   border:2px dotted #A9F5D0;
   width:400px;
   color:#92AAB0;
