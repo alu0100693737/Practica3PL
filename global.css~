@@ -28,7 +28,7 @@ margin-right: 20%;
   font-size:150%;
 }
 
-#float:left
+#entrada
 {
   font: oblique 120% sans-serif bold; 
 }

@@ -3,18 +3,17 @@
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <title>INI files</title>
     <link href="global.css" rel="stylesheet" type="text/css">
-    <link href="css/metro-bootstrap.css" rel="stylesheet" type="text/css">
-
-    <script type="text/javascript" src="js/underscore.js"></script>
-    <script type="text/javascript" src="js/jQuery.min.js"></script>
+    <script src="http://code.jquery.com/jquery-1.11.0.min.js"> </script>         <!-- JQuery -->
+    <script src="http://underscorejs.org/underscore.js"> </script>               <!-- Underscore -->
     <script type="text/javascript" src="js/ini.js"></script>
-     <script type="text/javascript" src="js/dragdrop.js"></script>
-<script type="text/html" id="elementTemplate">
-<li> <span class = "<%= t.type %>"> <%= s %> </span>
-</script>
+    
   </head>
   <body>
-  <div id="cuerpo">
+    <center>
+    <script type="text/html" id="elementTemplate">
+    <li> <span class = "<%= t.type %>"> <%= s %> </span>
+    </script>
+    <div id="cuerpo">
     
     <br>
     <h1>INI files</h1>
@@ -27,21 +26,49 @@
     structure composed of "sections" and "properties"</li>
     <li>The named "INI files" comes from the commonly used filename extension, .INI, which stands for "initialization". Other common initialization file extensions are
     .CFG, .cong and .txt.</li>
+    </div>
     
     
     
     
 <!-- Cargar ell Fichero correspondiente -->
   <div id="entrada" style="float:left;"> <p> Indique el fichero INI correspondiente: <input type="file" class="btn btn-default" id="fileinput" /> </p></div>
-   
    <br>
    <br>
    
    
-   <div id="deslizamiento">Drag & Drop Files Here</div>
-    <br>
-    <div id="out" class="hidden">
-      <table class="table">
+   <!--deslizamiento-->
+<div id="deslizar">Arrastre los archivos aquí</div>
+      <output id="list"></output>
+      
+      <script>
+          function handleDragOver(evt) 
+          {
+              evt.stopPropagation();
+              evt.preventDefault();
+              evt.target.style.background = "green";
+          }
+
+          function handleDragLeave(evt) 
+          {
+              evt.stopPropagation();
+              evt.preventDefault();
+              evt.target.style.background = "none";
+          }
+
+          // Setup the drag and drop listeners.
+          var dropZone = document.getElementById('drop_zone');
+          dropZone.addEventListener('dragover', handleDragOver, false);
+          dropZone.addEventListener('dragleave', handleDragLeave, false);
+          dropZone.addEventListener('drop', calculate, false);
+      </script> 	
+
+      <br>
+    <input type="file" id="fileinput" />
+    <div id="out" class = "hidden" >
+    
+    
+
         <tr><th>Original</th><th>Tokens</th></tr>
         <tr>
           <td>
@@ -52,6 +79,7 @@
           </td>
         </tr>
       </table>
+    </div>
     </div>
 
   </body>
